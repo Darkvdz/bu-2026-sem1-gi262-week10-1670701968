@@ -1,4 +1,5 @@
 using System;
+using static UnityEngine.GraphicsBuffer;
 
 namespace MidtermExam.Prob03
 {
@@ -16,8 +17,29 @@ namespace MidtermExam.Prob03
         /// </remarks>
         public int AS03_CountTotalNode(Node root)
         {
+            int target = 0;
+            int left = 0;
+            int right = 0;
+            int index = 1;
+            int mid = (left + right) / 2;
+
             // TODO: เขียนคำตอบแทนคำสั่ง throw ด้านล่าง
-            throw new NotImplementedException();
+            if (root == null) return 0;
+            if (mid == target)
+            {
+                target = 1;
+            }
+            else if (mid < left)
+            {
+                left = mid + 1;
+            }
+            else if (mid > right)
+            {
+                right = mid -1;
+            }
+
+            return index;
         }
+
     }
 }
